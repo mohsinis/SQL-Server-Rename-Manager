@@ -2,6 +2,8 @@
 
 A PowerShell script to automate SQL Server instance renaming and synchronize SQL Native Client aliases across multiple servers.
 
+---
+
 ## 📌 Features
 
 - **SQL Instance Renaming**  
@@ -20,6 +22,8 @@ A PowerShell script to automate SQL Server instance renaming and synchronize SQL
   - Connection termination with retry logic
   - Emergency multi-user mode restoration
 
+---
+
 ## ⚙️ Prerequisites
 
 - **PowerShell 5.1+** (Windows)
@@ -32,8 +36,57 @@ A PowerShell script to automate SQL Server instance renaming and synchronize SQL
   - Local admin on SQL Server
   - Domain admin for remote servers
 
+---
+
 ## 🚀 Installation
 
-1. Save the script:
-   ```powershell
-   Invoke-WebRequest -Uri <SCRIPT_URL> -OutFile "Complete-SqlRename.ps1"
+1. **Save the script**:
+    ```powershell
+    Invoke-WebRequest -Uri "<https://raw.githubusercontent.com/.../Complete-SqlRename.ps1>" -OutFile "Complete-SqlRename.ps1"
+    ```
+
+2. **Enable script execution**:
+    ```powershell
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    ```
+
+---
+
+## 🖥️ Usage
+
+### Basic Local Rename
+```powershell
+.\Complete-SqlRename.ps1 -NewServerName "NEW-SQL-01"
+```
+
+### Full Rename with Computer Name Change
+```
+.\Complete-SqlRename.ps1 -NewServerName "NEW-SQL-01" -RenameComputer
+```
+
+### Rename with Remote Alias Updates
+```
+.\Complete-SqlRename.ps1 -NewServerName "NEW-SQL-01" -RemoteServers "APP-01","APP-02"
+```
+## 📋 Parameters
+
+| Parameter         | Description                                  | Example                      |
+|-------------------|----------------------------------------------|------------------------------|
+| `-NewServerName`  | Target SQL Server name (Mandatory)           | `-NewServerName "SQL-PROD-01"` |
+| `-SqlInstance`    | SQL instance name (Default: local instance)  | `-SqlInstance ".\SQL2019"`     |
+| `-RenameComputer` | Rename Windows computer to match SQL name    | `-RenameComputer`             |
+| `-RemoteServers`  | Comma-separated list of remote servers       | `-RemoteServers "WEB-01","APP-02"` |
+
+## 🔍 Post-Rename Checklist
+
+1. Update application connection strings
+2. Modify linked server configurations
+3. Update SQL Agent jobs and SSIS packages
+4. Verify replication/AlwaysOn configurations
+5. Test client connectivity using aliases
+6. Update monitoring systems and documentation
+
+
+
+
+
