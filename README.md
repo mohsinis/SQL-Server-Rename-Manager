@@ -86,6 +86,37 @@ A PowerShell script to automate SQL Server instance renaming and synchronize SQL
 5. Test client connectivity using aliases
 6. Update monitoring systems and documentation
 
+## 🚨 Troubleshooting
+
+### Connection Failures
+```powershell
+Test-NetConnection -ComputerName <SERVER> -Port 445
+Get-Service -ComputerName <SERVER> -Name RemoteRegistry
+```
+### Access Denied Errors
+
+- Ensure Domain Admin credentials  
+- Verify registry write permissions  
+
+### Aliases Not Found
+
+```powershell
+reg query \\<SERVER>\HKLM\SOFTWARE\Microsoft\MSSQLServer\Client\ConnectTo
+```
+
+## ⚠️ Disclaimer
+
+- Test thoroughly in non-production environments
+- Ensure valid backups before execution
+- Run during maintenance windows
+- Notify dependent teams before execution
+
+## 📜 License
+MIT License
+
+## 🏷️ Version
+1.0.0 - Updated 2025-02-08
+
 
 
 
