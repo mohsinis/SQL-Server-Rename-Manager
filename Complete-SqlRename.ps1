@@ -27,6 +27,8 @@ Key Features:
 Mohsin Yasin
 
 .CONTACT
+For inquiries, open an issue at:
+GitHub Issues: https://github.com/mohsinis/SQL-Server-Rename-Manager/issues
 
 .LINK
 Microsoft Docs: Rename SQL Server Instance
