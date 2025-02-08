@@ -33,6 +33,12 @@ GitHub Issues: https://github.com/mohsinis/SQL-Server-Rename-Manager/issues
 .LINK
 Microsoft Docs: Rename SQL Server Instance
 https://docs.microsoft.com/en-us/sql/database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server
+
+.DISCLAIMER
+This script is provided "as is," without warranty of any kind, express or implied, 
+including but not limited to the warranties of merchantability, fitness for a particular purpose, 
+and non-infringement. In no event shall the author or contributors be liable for any claim, 
+damages, or other liability arising from the use of this script. Use at your own risk.
 #>
 
 param(
