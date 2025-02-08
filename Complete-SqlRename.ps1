@@ -23,6 +23,11 @@ Key Features:
 - Should be run during maintenance hours
 - Creates transaction log backups automatically
 
+.AUTHOR
+Mohsin Yasin
+
+.CONTACT
+
 .LINK
 Microsoft Docs: Rename SQL Server Instance
 https://docs.microsoft.com/en-us/sql/database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server
