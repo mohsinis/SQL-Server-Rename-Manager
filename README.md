@@ -60,12 +60,12 @@ A PowerShell script to automate SQL Server instance renaming and synchronize SQL
 ```
 
 ### Full Rename with Computer Name Change
-```
+```powershell
 .\Complete-SqlRename.ps1 -NewServerName "NEW-SQL-01" -RenameComputer
 ```
 
 ### Rename with Remote Alias Updates
-```
+```powershell
 .\Complete-SqlRename.ps1 -NewServerName "NEW-SQL-01" -RemoteServers "APP-01","APP-02"
 ```
 ## 📋 Parameters
