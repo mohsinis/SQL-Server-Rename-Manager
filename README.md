@@ -42,7 +42,7 @@ A PowerShell script to automate SQL Server instance renaming and synchronize SQL
 
 1. **Save the script**:
     ```powershell
-    Invoke-WebRequest -Uri "<[https://raw.githubusercontent.com/.../Complete-SqlRename.ps1](https://raw.githubusercontent.com/mohsinis/SQL-Server-Rename-Manager/refs/heads/main/Complete-SqlRename.ps1)>" -OutFile "Complete-SqlRename.ps1"
+    Invoke-WebRequest -Uri "<https://raw.githubusercontent.com/mohsinis/SQL-Server-Rename-Manager/refs/heads/main/Complete-SqlRename.ps1>" -OutFile "Complete-SqlRename.ps1"
     ```
 
 2. **Enable script execution**:
