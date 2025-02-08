@@ -112,7 +112,7 @@ reg query \\<SERVER>\HKLM\SOFTWARE\Microsoft\MSSQLServer\Client\ConnectTo
 - Notify dependent teams before execution
 
 ## 📜 License
-MIT License
+This project is licensed under the [MIT License](https://raw.githubusercontent.com/mohsinis/SQL-Server-Rename-Manager/main/LICENSE).
 
 ## 🏷️ Version
 1.0.0 - Updated 2025-02-08
